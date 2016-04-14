@@ -22,9 +22,19 @@
 
 */
 #include "stdafx.h"
-
+int temp;
 
 int get_steps(int s)
 {
-	return 0;
+	if (s == 0)
+		return 0;
+	else if (s == 1)
+		return 1;
+	else if (s == 2)
+		return 2;
+	else
+	{
+		temp = get_steps(s-1) + get_steps(s - 2);
+		return (temp);
+	}
 }
